@@ -11,9 +11,11 @@ class Goods
     ]
   end
 
-  def price(item)
-    @goods.map {
-      |arr_item|.each {|key,value| puts value}
-  }
-end
-end
+  def price(this_item)
+    @goods.select { |hash|
+      hash[:item] == this_item
+      return hash[:price]
+    }
+  end
+  
+  end
