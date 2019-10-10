@@ -13,9 +13,10 @@ class Goods
 
   def price(this_item)
     @goods.select { |hash|
-      hash[:item] == this_item
+      if hash[:item] == this_item
       return hash[:price]
+    end 
     }
   end
-  
+
   end
